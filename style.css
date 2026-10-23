@@ -1,0 +1,164 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #f8f7f9;
+  color: #25202a;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background: #211923;
+}
+
+.logo {
+  color: #f3a0c1;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo-simbolo { margin-right: 0.3rem; }
+.menu { display: flex; gap: 0.5rem; }
+
+.menu a {
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  color: #eee7ef;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu a:hover, .menu a.ativo { background: #813d62; color: #fff; }
+
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
+
+.hero {
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  background: #3a2637;
+  color: #fff;
+}
+
+.hero-conteudo { max-width: 600px; }
+.sobretitulo, .card-numero { color: #df8eaf; font-size: 0.78rem; font-weight: 700; }
+.hero h1, .pagina-cabecalho h1 { margin: 0.7rem 0; font-size: 2.5rem; line-height: 1.15; }
+.hero h1 span, .pagina-cabecalho h1 span { color: #f3a0c1; }
+.hero-texto { max-width: 520px; margin-bottom: 1.2rem; }
+.hero-arte, .hero-rodape { display: none; }
+
+.botao {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #e9a0bd;
+  color: #261923;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover { background: #f4b7d0; }
+
+.secao-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.secao-intro h2 { margin-top: 0.4rem; font-size: 2rem; line-height: 1.2; }
+.texto-intro, .pagina-cabecalho > p:last-child { color: #615765; }
+
+.cards { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.card {
+  position: relative;
+  flex: 1 1 220px;
+  min-height: 210px;
+  padding: 1.3rem;
+  border: 1px solid #e5dfe7;
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.card:hover { border-color: #d17a9d; }
+.card h2 { margin: 0.7rem 0 0.4rem; font-size: 1.2rem; }
+.card p { color: #615765; }
+.card-link { display: inline-block; margin-top: 1rem; color: #8d3d64; font-weight: 700; }
+.card-simbolo { display: none; }
+
+.pagina { min-height: 65vh; }
+.pagina-cabecalho { margin-bottom: 1.5rem; padding: 1.5rem 0; }
+.pagina-cabecalho h1 { font-size: 2.3rem; }
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.biografia, .ficha, .album {
+  padding: 1.5rem;
+  border: 1px solid #e5dfe7;
+  border-radius: 10px;
+  background: #fff;
+  color: #25202a;
+}
+
+.biografia h2, .album-info h2 { margin: 0.5rem 0; }
+.biografia > p:not(.sobretitulo) { margin-top: 0.8rem; }
+.ficha-simbolo { display: none; }
+.ficha dl { margin-top: 1rem; }
+.ficha dl div { padding: 0.6rem 0; border-top: 1px solid #eee8ef; }
+.ficha dt { color: #615765; font-size: 0.85rem; }
+.ficha dd { font-weight: 600; }
+
+.frase-final {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-left: 4px solid #bd6388;
+  border-radius: 6px;
+  background: #f0e8ee;
+}
+
+.frase-final p { font-size: 1.2rem; font-weight: 600; }
+.frase-final span { color: #8d3d64; font-size: 0.75rem; font-weight: 700; }
+
+.discografia { display: grid; gap: 0.8rem; }
+.album h2 { margin-bottom: 0.3rem; font-size: 1.15rem; }
+.album h2 span { color: #8d3d64; font-size: 0.9rem; }
+.album p { color: #615765; }
+
+.rodape {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  background: #211923;
+  color: #eee7ef;
+}
+
+.rodape p, .rodape > span { font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+  .topo { justify-content: center; }
+  .menu { width: 100%; justify-content: center; }
+  .hero { padding: 2rem 1.3rem; }
+  .hero h1, .pagina-cabecalho h1 { font-size: 2rem; }
+  .secao-intro, .conteudo { grid-template-columns: 1fr; }
+  .rodape { justify-content: center; text-align: center; }
+}
